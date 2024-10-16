@@ -1,0 +1,15 @@
+{
+    "SourceCode": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0;\r\n\r\ninterface MyGo {\r\n    function go() external;\r\n}\r\n\r\ncontract DeployAndRun {\r\n    function go(bytes calldata _data) external {\r\n        bytes memory code = abi.encodePacked(\r\n            hex\"63\",\r\n            uint32(_data.length),\r\n            hex\"80_60_0E_60_00_39_60_00_F3\",\r\n            _data\r\n        );\r\n\r\n        address pointer;\r\n        assembly { \r\n            pointer := create(0, add(code, 32), mload(code)) \r\n        }\r\n        MyGo(pointer).go();\r\n    }\r\n}",
+    "ABI": "[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"go\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+    "ContractName": "DeployAndRun",
+    "CompilerVersion": "v0.8.17+commit.8df45f5f",
+    "OptimizationUsed": "0",
+    "Runs": "200",
+    "ConstructorArguments": "",
+    "EVMVersion": "Default",
+    "Library": "",
+    "LicenseType": "MIT",
+    "Proxy": "0",
+    "Implementation": "",
+    "SwarmSource": "ipfs://9f036a73c08609a880254d8ddd407b4ebc0cb828d033d8c12fb2e20dc346a83e"
+}

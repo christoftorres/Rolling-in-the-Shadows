@@ -1,0 +1,15 @@
+{
+    "SourceCode": "// SPDX-License-Identifier: gpl-3.0\r\npragma solidity >= 0.8.0 < 0.9.0;\r\n\r\ncontract MinerPayer {\r\n    fallback () external {\r\n        assert(false);\r\n    }\r\n    receive() payable external {\r\n        assert(false);\r\n    }\r\n    \r\n    function exec(address to, bytes calldata data) external payable {\r\n        (bool success,) = to.call(data);\r\n        require(success);\r\n        block.coinbase.transfer(msg.value);\r\n    }\r\n}",
+    "ABI": "[{\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"exec\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+    "ContractName": "MinerPayer",
+    "CompilerVersion": "v0.8.4+commit.c7e474f2",
+    "OptimizationUsed": "1",
+    "Runs": "99999",
+    "ConstructorArguments": "",
+    "EVMVersion": "Default",
+    "Library": "",
+    "LicenseType": "GNU GPLv3",
+    "Proxy": "0",
+    "Implementation": "",
+    "SwarmSource": "ipfs://78db8a77141ac79d2e08c962375652d3a74e8561a5144278b44bd345a46010b7"
+}

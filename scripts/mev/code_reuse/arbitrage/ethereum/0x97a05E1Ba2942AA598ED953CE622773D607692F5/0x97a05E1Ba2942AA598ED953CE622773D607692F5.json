@@ -1,0 +1,15 @@
+{
+    "SourceCode": "//SPDX-License-Identifier: Unlicense\r\npragma solidity ^0.7.0;\r\n\r\ncontract Relayer {\r\n    address owner;\r\n\r\n    mapping(address => bool) private allowedUsers;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function adduser(address newuser) public {\r\n        require(msg.sender == owner);\r\n        allowedUsers[newuser] = true;\r\n    }\r\n\r\n    function relay(\r\n        bytes memory _calldata,\r\n        address _dsaadress,\r\n        uint256 _maxblock\r\n    ) public {\r\n        if (block.number > _maxblock) { \r\n            revert(\"toolate\");\r\n        }\r\n\r\n        require(msg.sender == owner || allowedUsers[msg.sender]);\r\n\r\n        (bool success, ) = _dsaadress.call(_calldata);\r\n        if (success == false) {\r\n            assembly {\r\n                let size := returndatasize()\r\n                returndatacopy(0x00, 0x00, size)\r\n                revert(0x00, size)\r\n            }\r\n        }\r\n    }\r\n}",
+    "ABI": "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newuser\",\"type\":\"address\"}],\"name\":\"adduser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_calldata\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"_dsaadress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_maxblock\",\"type\":\"uint256\"}],\"name\":\"relay\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+    "ContractName": "Relayer",
+    "CompilerVersion": "v0.7.5+commit.eb77ed08",
+    "OptimizationUsed": "0",
+    "Runs": "200",
+    "ConstructorArguments": "",
+    "EVMVersion": "Default",
+    "Library": "",
+    "LicenseType": "None",
+    "Proxy": "0",
+    "Implementation": "",
+    "SwarmSource": "ipfs://840fe8edf03a7fc1ee5efb2ec3b873193d00922bbb08379b3dbc349b81f0d975"
+}

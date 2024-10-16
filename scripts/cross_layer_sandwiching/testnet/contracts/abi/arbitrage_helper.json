@@ -1,0 +1,247 @@
+{
+    "compiler": {
+        "version": "0.8.20+commit.a1b79de6"
+    },
+    "language": "Solidity",
+    "output": {
+        "abi": [
+            {
+                "inputs": [],
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "oldOwner",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "OwnerSet",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "l1_original_sender",
+                        "type": "address"
+                    }
+                ],
+                "name": "ReceivedMessage",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "l1_original_sender",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "pool_address",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "amount0",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "amount1",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "SwapPerformed",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "internalType": "address",
+                        "name": "to",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "internalType": "uint256",
+                        "name": "value",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "Withdrawn",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint8",
+                        "name": "index_from",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "index_to",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount_in",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount_min",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "deadline",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "swap",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "withdraw",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "stateMutability": "payable",
+                "type": "receive"
+            }
+        ],
+        "devdoc": {
+            "details": "implements the needed logic to be called from L1 and execute L2 swaps for the target account",
+            "kind": "dev",
+            "methods": {
+                "constructor": {
+                    "details": "Set contract deployer as owner"
+                }
+            },
+            "title": "arbitrage_helper scripts",
+            "version": 1
+        },
+        "userdoc": {
+            "kind": "user",
+            "methods": {},
+            "version": 1
+        }
+    },
+    "settings": {
+        "compilationTarget": {
+            "contracts/arbitrage_helper.sol": "Arbitrage_Helper"
+        },
+        "evmVersion": "istanbul",
+        "libraries": {},
+        "metadata": {
+            "bytecodeHash": "ipfs"
+        },
+        "optimizer": {
+            "enabled": false,
+            "runs": 200
+        },
+        "remappings": []
+    },
+    "sources": {
+        "/interfaces/ICrossDomainMessenger.sol": {
+            "keccak256": "0x8f059c07c20af38a14a2306ca017aa62b7a885eda33d51bf6a64fcb74a4cc612",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://aa788c10f13da8340f7497cb408b3eac14cafd142c501f7a155159ce58578c39",
+                "dweb:/ipfs/QmR2j8pYJbz1xh7xTqxrSLP6yogSWTUwpyLytgvUu3g6gy"
+            ]
+        },
+        "/interfaces/ISwap.sol": {
+            "keccak256": "0x0859ca726d8e2e95bc7e32967e0ecf347308d9869592f7c13ac11ca2adb3f8a6",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://75bde7120d3b17a8622e1971a8fc43883d78415092f33a75da53b9cd93bcb29b",
+                "dweb:/ipfs/QmeVuKh4aoAyHLBRd6dXvZD92jLwU5YHGB1juxnwwhetXe"
+            ]
+        },
+        "@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
+            "keccak256": "0x60c65f701957fdd6faea1acb0bb45825791d473693ed9ecb34726fdfaa849dd7",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://ea290300e0efc4d901244949dc4d877fd46e6c5e43dc2b26620e8efab3ab803f",
+                "dweb:/ipfs/QmcLLJppxKeJWqHxE2CUkcfhuRTgHSn8J4kijcLa5MYhSt"
+            ]
+        },
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+            "keccak256": "0xc3e1fa9d1987f8d349dfb4d6fe93bf2ca014b52ba335cfac30bfe71e357e6f80",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://c5703ccdeb7b1d685e375ed719117e9edf2ab4bc544f24f23b0d50ec82257229",
+                "dweb:/ipfs/QmTdwkbQq7owpCiyuzE7eh5LrD2ddrBCZ5WHVsWPi1RrTS"
+            ]
+        },
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+            "keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+                "dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+            ]
+        },
+        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+            "keccak256": "0xaa761817f6cd7892fcf158b3c776b34551cde36f48ff9703d53898bc45a94ea2",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://0ad7c8d4d08938c8dfc43d75a148863fb324b80cf53e0a36f7e5a4ac29008850",
+                "dweb:/ipfs/QmcrhfPgVNf5mkdhQvy1pMv51TFokD3Y4Wa5WZhFqVh8UV"
+            ]
+        },
+        "@openzeppelin/contracts/utils/Context.sol": {
+            "keccak256": "0x75a4ee64c68dbd5f38bddd06e664a64c8271b4caa554fb6f0607dfd672bb4bf3",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://0c4e6cb30d3601e2f7af5af09e265508147cb275a8dcd99d6f7363645cc56867",
+                "dweb:/ipfs/QmNgFkoXNWoUbAyw71rr1sKQ95Rj2GfvYiWg79xEYDn2NY"
+            ]
+        },
+        "contracts/arbitrage_helper.sol": {
+            "keccak256": "0xe6e62fb551b8a5b01972d74a48e04d54578c081310edf92d2d380e1c7fdd29b4",
+            "license": "GPL-3.0",
+            "urls": [
+                "bzz-raw://9c519ee3e7a89b5e62ed00f8ae79109e015662b72c94770e4a8753b1a1376177",
+                "dweb:/ipfs/QmbhHMYAWenCqL7axpaXs5cHDWinKYtmDhPm1Rq3V6Rnfv"
+            ]
+        },
+        "hardhat/console.sol": {
+            "keccak256": "0x7434453e6d3b7d0e5d0eb7846ffdbc27f0ccf3b163591263739b628074dc103a",
+            "license": "MIT",
+            "urls": [
+                "bzz-raw://49355f780520494d1d5a0f01858385e51bb5280ce0ecfb960f16995065dca395",
+                "dweb:/ipfs/QmSwJ6C5QLz6xKeQZS8wbwjU1KxRFTYfwbGmtzisd5sRW4"
+            ]
+        }
+    },
+    "version": 1
+}
