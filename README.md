@@ -1,6 +1,6 @@
 <h1 align="center">Rolling in the Shadows</h1>
 
-This repository contains our dataset of detected MEV across Ethereum and layer-2 rollups such as Arbitrum, Optimism, and zkSync. It also includes a collection of tools that we used to measure and compare MEV as well as a proof-of-concept implementation of cross-layer sandwich attacks where we demonstrate that frontrunning is possible on layer-2 rollups as a normal user (i.e., without being a sequencer). 
+This repository contains our dataset of detected MEV across Ethereum and Layer-2 rollups such as Arbitrum, Optimism, and zkSync. It also includes a collection of tools that we used to measure and compare MEV as well as a proof-of-concept implementation of cross-layer sandwich attacks where we demonstrate that frontrunning is possible on Layer-2 rollups as a normal user (i.e., without being a sequencer). 
 
 Our paper can be found [here](https://arxiv.org/pdf/2405.00138).
 
