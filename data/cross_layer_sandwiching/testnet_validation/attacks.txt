@@ -1,0 +1,134 @@
+
+Testnet Validation Transactions
+
+Attack Strategy S1
+
+Arbitrum
+
+TA1
+L1 https://sepolia.etherscan.io/tx/0x72376cbafbe09901f9a027b18c3efc3260c425c37fb8bee806b366397086561d
+L2 https://sepolia.arbiscan.io/tx/0xe5d74adb9d534d47db4e8d8efd44af35fd07e03bf73b068fc4d4e8e9eb108c28
+
+TV
+L1 https://sepolia.etherscan.io/tx/0x875f096dd6dfb509f43f232814fd8f7b34c6093d905fb464f9ffd65b79e5ab89
+L2 https://sepolia.arbiscan.io/tx/0x7426864411b565bb904157267cd1469f017aff50c377c10b0c3717885c5948b5
+
+TA2
+L1 https://sepolia.etherscan.io/tx/0x35e8dbdd0710ca87a48e53b31ae1804c40dd79b04a2c394558b7ba74b25843e0
+L2 https://sepolia.arbiscan.io/tx/0x31fa8e5e4fc08ad5a0d74cb81f2d2a9278e59d44c3e1075d99da73ea45645962
+
+Optimism
+
+TA1
+L1 https://sepolia.etherscan.io/tx/0x0c96a0bf59950157b65da5b80fc96ab769dd464d4c1376ccd0bc0b86f831e38d
+L2 https://sepolia-optimism.etherscan.io/tx/0x2f266df801ff3b71dc595f0e4970c97f73396485a93aaec464afddf9e8efc4f8
+
+TV
+L1 https://sepolia.etherscan.io/tx/0x3bb4c397fc3172a3628cf0b395f160796cdb8c0ca1f2d3a9c0676b211a1f1dda
+L2 https://sepolia-optimism.etherscan.io/tx/0x0169f3424944a98f4da8e61da4d6bc2823a6b5e16b56f795d49fc913beccb82c
+
+TA2
+L1 https://sepolia.etherscan.io/tx/0x0578f49b95ffc708f99cfb5212a8ec022896341ddb0c0cf8b3e381cf3fd35e73
+L2 https://sepolia-optimism.etherscan.io/tx/0x595ab89c67914b9d5993ee932261a1960dd0506aebeee38418d06358fd943c0b
+
+zkSync
+
+TA1
+L1 https://sepolia.etherscan.io/tx/0xd27af0131d47ee505a6675ea4372d3215d19bce3ed30da2832a98887b2423148
+L2 https://sepolia-era.zksync.network/tx/0xefe7c2c081c96557adb4ff5f41ebf889a73252e8471b287a52e4d9254bce4ed3
+
+TV
+L1 https://sepolia.etherscan.io/tx/0xaef7f4ed9fefea8e9a0769b3b41f02f8ed4733ef4c1829c8cc099e0ad09c3ba8
+L2 https://sepolia-era.zksync.network/tx/0xcc7c5cd049d5aed3571d1da8eabad5bf19a078829f495fcb8a0f3d1e2bcfe78e
+
+TA2
+L1 https://sepolia.etherscan.io/tx/0x6e0a5a7af9cc5d75457c0bd3c4a9d6860c8d31cde206ff1081fe4b27ab3abeb3
+L2 https://sepolia-era.zksync.network/tx/0xd8ae6a84bed853e52b58b0c7e393283f2a1743f8c66cbe69dc74af65790c851b
+
+Attack Strategy S2
+
+Arbitrum
+
+TA1
+L1 https://sepolia.etherscan.io/tx/0x3c261ff7b6a6a1b83af3bf4b7a50883addf53c488ab9bcfa929056fb54ae22cb
+L2 https://sepolia.arbiscan.io/tx/0xb5bb1eea25224e861513c36c805f2b526a18bf1426075dcbc1fa89e4d81cfc1a
+
+TV
+L1 https://sepolia.etherscan.io/tx/0x55488bfd38434cd23aecab767b70a042de203a2d6497eafe15db1eaab3bce448
+L2 https://sepolia.arbiscan.io/tx/0x9858cff8322987c07504e150cbef94112e025acb0de4a37f9df045d3c7f38841
+
+TA2
+L1 -
+L2 https://sepolia.arbiscan.io/tx/0xa6c62d7261638c0129e0528f49776222a537df5a77a2a016f472743c7d96ae00
+
+Optimism
+
+TA1
+L1 https://sepolia.etherscan.io/tx/0x78004cc692566528a48995228a78e64d9b5586cdc2f0fe7ed3476f57adbd8182
+L2 https://sepolia-optimism.etherscan.io/tx/0x059daf9e6a8d051cbe9a2fbfb1b9d50b4f56333d0b82838af124a0fe61e5f362
+
+TV
+L1 https://sepolia.etherscan.io/tx/0x4bdaf3191e24ed8c4628a409ffddb9a64deda9cec3b0ff028eda134163aef0e0
+L2 https://sepolia-optimism.etherscan.io/tx/0x9fea892e2b743206317527811e0e35b86e8a732636c1682cb0ac73ef7b68d918
+
+TA2
+L1 -
+L2 https://sepolia-optimism.etherscan.io/tx/0x8ebf27abb3dd978b83af659812722b5e708264f5955e27def290febd23560394
+
+zkSync
+
+TA1
+L1 https://sepolia.etherscan.io/tx/0xe561502b7203a4151d822241a6de2c7873896888a3a71e6a78c3e80c49c5f522
+L2 https://sepolia-era.zksync.network/tx/0x72758c56eda7939ab498b147f55feb00666b63c9657cc509447031009cf17e92
+
+TV
+L1 https://sepolia.etherscan.io/tx/0xba2f7129e00dce304753df8c2736d4adcb465fcaf65a92370a939f5967c9c173
+L2 https://sepolia-era.zksync.network/tx/0xc7665bcc19c8220ac43f651c51eb31238a95f0f9198c8e749d5114af36b05ab6
+
+TA2
+L1 -
+L2 https://sepolia-era.zksync.network/tx/0x080116647334dcc3302433f9aa8b4bf900747b310669013274e2ad83a17fd346
+
+Attack Strategy S3
+
+Arbitrum
+
+TA1
+L1 -
+L2 https://sepolia.arbiscan.io/tx/0xc9c049760b3326635ccebda9eac2a6ef3cd7b81c59bc0a393f2e658f90e63321
+
+TV
+L1 https://sepolia.etherscan.io/tx/0x6b100c05f8a3fe48625002a8e2159d83955e2b05b3036c1b68b01c418a13e828
+L2 https://sepolia.arbiscan.io/tx/0xed70e6167004cb6a13cec3a63b308b6cfb05be324ff57cf33fef6ce94cb62854
+
+TA2
+L1 -
+L2 https://sepolia.arbiscan.io/tx/0xae2d773d0569360684201c315f721a70c289ef2c17916d046e2f4a59eb2e039d
+
+Optimism
+
+TA1
+L1 -
+L2 https://sepolia-optimism.etherscan.io/tx/0x4158d2c20508c4bf03fbc9b17aec493b2fb617ea03228f362201b82dc4906c16
+
+TV
+L1 https://sepolia.etherscan.io/tx/0xe843550c3423f2a27ced281c5dda32805e0e0519bce942efec0593870fad219d
+L2 https://sepolia-optimism.etherscan.io/tx/0x69cdf5b56453dc9596b410dd6d2bb0fbdf217a265171639f86d10bc69b8274e8
+
+TA2
+L1 -
+L2 https://sepolia-optimism.etherscan.io/tx/0xf24d84d05ca89f249fa07688a04b9f5b84abb73d32339b327458494b15cf359c
+
+zkSync
+
+TA1
+L1 -
+L2 https://sepolia-era.zksync.network/tx/0xb53ce9ccea03a6fbe61fad6d47c7f9574fee397948f2817b5bd747e3693db39a
+
+TV
+L1 https://sepolia.etherscan.io/tx/0x015981d3111d2126d01f45bd065339501b3a8fea758332336f6ac99d5035b270
+L2 https://sepolia-era.zksync.network/tx/0x70bf2a717ff3b6c91d9cd9c6553a33fbd1c17fcd4b0b8b65735e8ccbbdf242ec
+
+TA2
+L1 -
+L2 https://sepolia-era.zksync.network/tx/0x86e619f95deb062bb64632e883914cb93834e9239d15dc1d6d29ea8dbe902023
