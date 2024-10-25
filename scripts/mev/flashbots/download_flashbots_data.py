@@ -35,28 +35,27 @@ def main():
     mongo_connection = pymongo.MongoClient("mongodb://"+MONGO_HOST+":"+str(MONGO_PORT), maxPoolSize=None)
     collection = mongo_connection["flashbots"]["blocks"]
 
-    cursor = collection.find().sort("block_number", -1).limit(1)
-    max = None
-    for document in cursor:
-        max = document["block_number"]
+    before_block = block_range_end
 
-    ranges = list()
-    for i in range(block_range_start+API_LIMIT, block_range_end+API_LIMIT, API_LIMIT):
-        if max:
-            if i > max:
-                ranges.append(i)
-        else:
-            ranges.append(i)
-
-    for i in tqdm(ranges):
+    pbar = tqdm(unit="blocks")
+    while before_block > block_range_start:
         retries = 0
-        while (retries < 3):
-            res = requests.get("https://blocks.flashbots.net/v1/blocks?limit="+str(API_LIMIT)+"&before="+str(i))
+        while retries < 3:
+            res = requests.get(
+                f"https://blocks.flashbots.net/v1/blocks?limit={API_LIMIT}&before={before_block}"
+            )
             if res.status_code == 200:
                 blocks = res.json()["blocks"]
-                print("https://blocks.flashbots.net/v1/blocks?limit="+str(API_LIMIT)+"&before="+str(i), len(blocks))
+                if not blocks:
+                    before_block = block_range_start
+                    break
+                num_blocks = 0
                 for block in blocks:
-                    exists = collection.find_one({"block_number": block["block_number"]})
+                    block_number = block["block_number"]
+                    if block_number < block_range_start:
+                        before_block = block_range_start
+                        break
+                    exists = collection.find_one({"block_number": block_number})
                     if not exists:
                         collection.insert_one(block)
                         # Indexing...
@@ -64,14 +63,19 @@ def main():
                             collection.create_index('block_number')
                             collection.create_index('fee_recipient')
                             collection.create_index('miner')
+                    num_blocks += 1
+                    pbar.update(1)
+                before_block = min(block["block_number"] for block in blocks)
                 time.sleep(0.01)
                 break
             else:
                 retries += 1
                 time.sleep(10)
-        if retries == 3:
+        else:
             print(colors.FAIL+"Error:", res.text, colors.END)
             sys.exit(-4)
+    pbar.close()
+
 
 if __name__ == "__main__":
     main()
